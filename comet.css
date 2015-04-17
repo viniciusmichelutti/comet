@@ -1,1 +1,65 @@
-/* CSS declarations go here */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+
+body {
+    background: #2c3338;
+	color: #606468;
+    font-family: 'Open Sans', Tahoma, sans-serif;
+    margin: 0;
+}
+a { color: #eee; text-decoration: none; }
+a:hover { text-decoration:underline; }
+h1 { margin:20px 0; font-size:48px; }
+h2 { margin:20px 0; font-size:36px; }
+h3 { margin:20px 0; font-size:23px; }
+
+input {
+	border: none;
+	font-size: 14px;
+	line-height: 1.5em;
+	padding: 0;
+	-webkit-appearance: none;
+}
+
+form input {
+	height: 50px;
+}
+
+form input[type="text"], input[type="password"] {
+	background-color: #3b4148;
+	border-radius: 0px 3px 3px 0px;
+	color: #606468;
+	margin-bottom: 1em;
+	padding: 0 16px;
+	width: 315px;
+}
+
+form i {
+	background-color: #363b41;
+	border-radius: 3px 0px 0px 3px;
+	color: #606468;
+	display: block;
+	float: left;
+	height: 50px;
+	line-height: 50px !important;
+	text-align: center;
+	width: 50px;
+}
+
+form input[type="submit"] {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #ea4c88;
+	color: #eee;
+	font-weight: bold;
+	margin-bottom: 2em;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+form input[type="submit"]:hover {
+	background-color: #d44179;
+}
+
+.wrapper { width:400px; margin:50px auto; }
+.text-center { text-align:center; }

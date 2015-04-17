@@ -3,12 +3,31 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+    <div class="wrapper">
+        <i class="fa fa-rocket fa-3x"></i>
+        <h3><a href="#">comet</a> is free, open source and a great chat experience</h3>
+        {{> login}}
+    </div>
+    
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="login">
+    <form>
+        <p>
+            <i class="fa fa-user fa-lg"></i>
+            <input type="text" name="nickname" placeholder="Your nickname" />
+        </p>
+        <p>
+            <i class="fa fa-envelope-o fa-lg"></i>
+            <input type="text" name="email" placeholder="em@il" />
+        </p>
+        <p>
+            <i class="fa fa-key fa-lg"></i>
+            <input type="password" name="password" placeholder="****" />
+        </p>
+        
+        <input type="submit" value="Sign In" />
+    </form>
+     <p class="text-center">Not a member? <a href="#">Sign up now</a>! <i class="fa fa-arrow-right fa-lg"></i></p>
 </template>

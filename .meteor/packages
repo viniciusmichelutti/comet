@@ -9,3 +9,5 @@ autopublish
 insecure
 fortawesome:fontawesome
 accounts-password
+iron:router
+jparker:gravatar

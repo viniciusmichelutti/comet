@@ -1,3 +1,16 @@
 <template name="chat">
-    <p>You're logged in. <a href="#" class="logout">Logout</a></p>
+    <div id="topbar" class="blueBg">
+        <h4 class="left logo"><i class="fa fa-rocket fa-lg"></i> comet</h4>
+        <div id="rightMenu" class="right">
+            <img src="{{gravatarUrl}}" class="userImage" /> {{currentUser.username}}
+            
+            <div class="menuLinks">
+                <a href="#" class="logout" title="Logout"><i class="fa fa-sign-out fa-lg"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    {{> messages}}
+    
+    {{> newMessage}}
 </template>

@@ -1,10 +1,15 @@
-Template.login.events({
+Template.loginForm.events({
 	'submit form': function (e) {
 		e.preventDefault();
 		var email = e.target.email.value;
 		var pass = e.target.password.value;
 		Meteor.loginWithPassword(email, pass, function(err) {
-			if (err) $('.error').removeClass('none');
+			if (err) {
+                $('.error').removeClass('none');
+            } else {
+                console.log('logou!');
+                Router.go('chat');
+            }
 		});
 	},
 	'click .signUp': function(e) {
@@ -15,7 +20,7 @@ Template.login.events({
 	}
 });
 
-Template.register.events({
+Template.registerForm.events({
 	'submit form': function(e) {
 		e.preventDefault();
 		var email = e.target.email.value;

@@ -1,31 +1,53 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-body { font-family: 'Open Sans', Tahoma, sans-serif; margin: 0; }
+body { font-family: 'Lato', Tahoma, sans-serif; margin: 0; }
+p { margin:0 0 10px; }
 a { color: #eee; text-decoration: none; }
 a:hover { text-decoration:underline; }
 h1 { margin:20px 0; font-size:48px; }
 h2 { margin:20px 0; font-size:36px; }
 h3 { margin:20px 0; font-size:23px; }
 h4 { margin:10px 0; font-size:16px; }
+h5 { margin:10px 0; font-size:14px; text-transform:uppercase; font-weight:bold; }
 
 .wrapper { width:400px; margin:50px auto; }
 .left { float:left; }
 .right { float:right; }
 .none { display:none; }
 .text-center { text-align:center; }
+.innerSpace { padding:0 25px; }
 
 .blueBg { background:#2c3338; color: #606468; }
+.darkBlueBg { background:#3e313c; }
+.lightBlueBg { background-color:#4d394b; color:#ab9ba9;}
+.green { color:green; font-size:11px; }
 .logo { font-weight:bold; }
 .error { margin:10px 0; background-color:#c0392b; padding:20px; border-radius:3px; color:#eee; }
-.userImage { border-radius:100%; }
+.userImage { border-radius:7px; }
+.obs { font-size:10px; }
+.active { border-radius:3px; background-color:green; }
 
-#topbar { position:fixed; top:0; left:0; right:0; padding:10px 20px; color:#fff; }
-#rightMenu { line-height:24px; margin-top:7px; }
-#rightMenu .userImage { float:left; margin-right:5px; }
-#rightMenu .menuLinks { margin-left:10px; float:right; font-size:12px; }
-#inputMessage { position:fixed; bottom:0; left:0; right:0; }
-#inputMessage input { padding:15px; width:100%; }
+.header { position:fixed; top:0; left:0; height:53px; width:100%; font-weight:bold; font-size:21px !important; }
+.header .sideMenu { display:block; position:relative; width:220px; height:53px; line-height:53px; float:left; border-bottom: 2px solid #372c36; color:#FFF; }
+.header .channelMenu { display:block; float:left; line-height:53px; }
 
-#messages { position:fixed; top:57px; left:0; right:0; bottom:49px; overflow-x:auto; padding:10px; line-height:24px; }
-#messages .userImage { float:left; margin-right:7px; }
-#messages .userName { color:#a3a3a3; }
+.main { position:absolute; top:53px; bottom:64px; left:0; right:0; }
+.sideContent { display:block; height:100%; width:220px; float:left; }
+.channelsList, .privateList { margin:20px 0; padding:0 25px; }
+.channelsList li, .privateList li { padding:5px; }
+.channelsList a, .privateList a { text-decoration:none; }
+.messages { margin-left:220px; overflow-y:auto; overflow-x:hidden; height:100%; padding:0 25px; }
+
+.footer { position:fixed; left:0; bottom:0; height:64px; width:100%; }
+.footer .userDetails { float:left; width:220px; height:100%; border-top: 2px solid #372c36; color:#FFF; padding-top:13px; }
+.footer .userImage { float:left; margin-right:5px; }
+.footer .userProfileName { display:block; font-weight:bold; }
+.footer .inputBox { position:absolute; left:220px; right:0; }
+.footer .inputBox input { width:90%; border:1px solid #372c36; padding:9px; margin-top:13px; }
+
+.message { position:relative; margin-top:5px; min-height:36px; }
+.message .userImage { position:absolute; left:0; display:block; margin-top:3px; }
+.message .messageBlock { margin-left:35px; }
+.message .userName { font-weight:bold; }
+.message .messageTime { text-align:left; display:inline; position:relative; top:0; left:0; color:#babbbf; width:36px; font-size:10px; }
+.message .messageContent { display:block; margin:1px 0 8px; line-height:18px; }

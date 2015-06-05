@@ -1,11 +1,13 @@
 <template name="messages">
-    <div id="messages">
-        {{#each messages}}
-            <p>
-                <img src="{{gravatarUrl}}" class="userImage" />
-                <span class="userName">{{currentUser.username}}</span>
-                <span>{{message}}</span>
-            </p>
-        {{/each}}
+  {{#each messages}}
+    <div class="message">
+      <img src="{{gravatarUrl user}}" class="userImage" />
+      <div class="messageBlock">
+        <span class="userName">{{usernameFromId user}}</span>
+        <span class="messageTime">{{timestampToTime time}}</span>
+        <span class="messageStar"></span>
+        <span class="messageContent">{{message}}</span>
+      </div>
     </div>
+  {{/each}}
 </template>

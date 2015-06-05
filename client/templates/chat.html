@@ -1,16 +1,51 @@
 <template name="chat">
-    <div id="topbar" class="blueBg">
-        <h4 class="left logo"><i class="fa fa-rocket fa-lg"></i> comet</h4>
-        <div id="rightMenu" class="right">
-            <img src="{{gravatarUrl}}" class="userImage" /> {{currentUser.username}}
-            
-            <div class="menuLinks">
-                <a href="#" class="logout" title="Logout"><i class="fa fa-sign-out fa-lg"></i></a>
-            </div>
-        </div>
+  <div class="header">
+    <div class="sideMenu darkBlueBg">
+      <div class="innerSpace">
+        <i class="fa fa-rocket fa-lg"></i> comet
+      </div>
     </div>
-    
-    {{> messages}}
-    
-    {{> newMessage}}
+    <div class="channelMenu">
+      <div class="innerSpace">
+        #general
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="sideContent lightBlueBg">
+      <div class="channelsList">
+        <h5>Channels</h5>
+        <ul>
+          <li class="active"><a href="#">#general</a></li>
+          <li><a href="#">#random</a></li>
+        </ul>
+      </div>
+      <div class="privateList">
+        <h5>Private</h5>
+        <p class="obs">Ops! Not implemented yet!</p>
+        <p class="obs">Want to see what features will come next? <a href="https://github.com/viniciusmichelutti/comet/milestones/v0.2" target="_blank">Check right now, our next release.</a></p>
+      </div>
+    </div>
+
+    <div class="messages">
+      {{> messages}}
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="userDetails darkBlueBg">
+      <div class="innerSpace">
+        <img src="{{gravatarUrl currentUser._id 36}}" class="userImage" />
+
+        <span class="userProfileName"><i class="fa fa-circle fa-1 green"></i> {{currentUser.username}}</span>
+        <a href="#" title="Edit Settings">settings</a>
+        <a href="#" class="logout" title="Logout">logout</a>
+      </div>
+    </div>
+
+    <div class="inputBox">
+      {{> newMessage}}
+    </div>
+  </div>
 </template>

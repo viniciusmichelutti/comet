@@ -18,6 +18,10 @@ Router.map(function(){
             if (!Meteor.userId()) {
                 Router.go('login');
             }
+
+            if (!Session.get('channel')) {
+              Session.set('channel', 'general');
+            }
             this.next();
         }
     });

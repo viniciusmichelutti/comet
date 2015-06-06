@@ -4,11 +4,9 @@ Template.newMessage.events({
         var msg = e.target.message.value;
         e.target.message.value = '';
 
-        Messages.insert({
-            user: Meteor.user()._id,
+        Meteor.call('addMessage', {
             message: msg,
-            time: Date.now(),
-            channel: Session.get('channel'),
+            channel: Session.get('channel')
         });
     }
 });

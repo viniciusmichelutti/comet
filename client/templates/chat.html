@@ -7,7 +7,7 @@
     </div>
     <div class="channelMenu">
       <div class="innerSpace">
-        #general
+        #{{channelName}}
       </div>
     </div>
   </div>
@@ -17,8 +17,9 @@
       <div class="channelsList">
         <h5>Channels</h5>
         <ul>
-          <li class="active"><a href="#">#general</a></li>
-          <li><a href="#">#random</a></li>
+          {{#each channels}}
+            <li class="{{active}}"><a href="#" class="channelLink">#{{name}}</a></li>
+          {{/each}}
         </ul>
       </div>
       <div class="privateList">

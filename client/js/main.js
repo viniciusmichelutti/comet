@@ -1,6 +1,3 @@
-// subscribe to collections
-Messages = new Meteor.Collection('messages');
-
 Template.registerHelper("gravatarUrl", function(userId, size){
   var email = Meteor.user().emails[0].address;
   if (userId) {
@@ -26,4 +23,8 @@ Template.registerHelper("timestampToTime", function (timestamp) {
 Template.registerHelper("usernameFromId", function (userId) {
 	var user = Meteor.users.findOne({_id: userId});
 	return user.username;
+});
+
+Template.registerHelper("channelName", function () {
+  return Session.get('channel');
 });

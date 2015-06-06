@@ -3,11 +3,12 @@ Template.newMessage.events({
         e.preventDefault();
         var msg = e.target.message.value;
         e.target.message.value = '';
-        
+
         Messages.insert({
             user: Meteor.user()._id,
             message: msg,
-            time: Date.now()
+            time: Date.now(),
+            channel: Session.get('channel'),
         });
     }
 });

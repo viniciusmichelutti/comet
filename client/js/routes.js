@@ -4,7 +4,8 @@ Router.map(function(){
         onBeforeAction: function() {
             $('body').addClass('blueBg');
             if (Meteor.userId()) {
-                Router.go('chat');
+              Session.set('channel', 'general');
+              Router.go('chat');
             }
             this.next();
         },

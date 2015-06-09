@@ -19,5 +19,12 @@ Template.chat.helpers({
 	  } else {
 	      return "";
 	  }
+	},
+	online: function() {
+		var users = Meteor.users.find({"status.online": true});
+		return users;
+	},
+	onlineCount: function() {
+		return Meteor.users.find({"status.online": true}).count();
 	}
 });

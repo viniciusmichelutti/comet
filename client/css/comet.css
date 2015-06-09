@@ -33,9 +33,10 @@ h5 { margin:10px 0; font-size:14px; text-transform:uppercase; font-weight:bold; 
 
 .main { position:absolute; top:53px; bottom:64px; left:0; right:0; }
 .sideContent { display:block; height:100%; width:220px; float:left; }
-.channelsList, .privateList { margin:20px 0; padding:0 25px; }
+.channelsList, .privateList, .onlineUsers { margin:20px 0; padding:0 25px; }
 .channelsList li, .privateList li { padding:5px; margin-bottom:5px; }
 .channelsList a, .privateList a { text-decoration:none; display:block; }
+.onlineUsers img { margin-right:3px; }
 .messages { margin-left:220px; overflow-y:auto; overflow-x:hidden; height:100%; padding:0 25px; }
 
 .footer { position:fixed; left:0; bottom:0; height:64px; width:100%; }

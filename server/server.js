@@ -22,6 +22,7 @@ Meteor.publish('allUsers', function() {
 		fields: {
 			'_id': 1,
 			'emails': 1,
-			'username': 1
+			'username': 1,
+			'status': 1
 		}});
 });
